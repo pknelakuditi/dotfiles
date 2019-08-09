@@ -1,3 +1,2 @@
 # `pipsi` dependencies
 
-wakatime

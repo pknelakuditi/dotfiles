@@ -45,3 +45,6 @@ WakaTime.sublime-settings
 # *.crt
 # *.key
 
+# Idea
+*.iml
+.idea

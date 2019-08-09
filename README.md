@@ -19,6 +19,7 @@ What's in there?
 - all my `vscode` configuration. See `vscode/`
 
 
+
 ## Installation
 
 We are using [`dotbot`](https://github.com/anishathalye/dotbot/)
@@ -100,22 +101,12 @@ Here's [a list of packages](https://github.com/sobolevn/dotfiles/blob/master/vsc
 - [`Vetur`](https://github.com/vuejs/vetur) for `Vue` features
 - [`Python`](https://github.com/Microsoft/vscode-python) plugin
 - `editoconfig` integration
-- `wakatime` integration
 
 I also use [powered-up `nano`](https://github.com/sobolevn/dotfiles/blob/master/config/nanorc)
 for in-terminal editing.
 
 
 ## External services
-
-I use [`wakatime`](https://wakatime.com/) for all my projects.
-It is a great tool to track time of your work. It is a free service.
-
-There are three main plugins I am using:
-
-1. For `vscode`: https://wakatime.com/vs-code
-2. For `idea`: https://wakatime.com/intellij-idea
-3. For `zsh`: https://github.com/sobolevn/wakatime-zsh-plugin#wakatime-zsh-plugin
 
 
 ## Local configuration

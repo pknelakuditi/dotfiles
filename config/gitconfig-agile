@@ -1,0 +1,4 @@
+[user]
+    email = pnelakuditi@agilesde.com
+[core]
+    hookspath = ~/.hooks
