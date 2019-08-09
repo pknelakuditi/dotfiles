@@ -1,6 +1,5 @@
 tap "getantibody/tap"
 tap "heroku/brew"
-tap "homebrew/apache"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -10,25 +9,26 @@ tap "homebrew/services"
 tap "jesseduffield/lazydocker"
 tap "mongodb/brew"
 tap "wagoodman/dive"
+brew "openssl"
+brew "python"
+brew "asciinema"
 brew "bash"
 brew "bash-completion"
-brew "python"
 brew "coreutils"
-brew "findutils", args: ["with-default-names"]
-brew "git"
 brew "diff-so-fancy"
-brew "asciinema"
-brew "gnu-indent", args: ["with-default-names"]
-brew "gnu-which", args: ["with-default-names"]
+brew "gcc"
+brew "git"
 brew "go"
 brew "grep"
 brew "less"
 brew "mas"
 brew "maven"
 brew "mongodb"
+brew "nnn"
+brew "node"
 brew "node@8"
 brew "nvm"
-brew "openssl"
+brew "openshift-cli"
 brew "protobuf"
 brew "rsync"
 brew "sbt"
@@ -37,29 +37,35 @@ brew "vim"
 brew "watch"
 brew "wget"
 brew "youtube-dl"
-brew "openshift-cli"
+brew "z"
 brew "zsh"
 brew "getantibody/tap/antibody"
 brew "heroku/brew/heroku"
 brew "wagoodman/dive/dive"
 cask "cheatsheet"
+cask "docker"
 cask "dropbox"
 cask "firefox"
 cask "google-chrome-canary"
-cask "hipchat"
 cask "iterm2"
 cask "java11"
 cask "jetbrains-toolbox"
 cask "openoffice"
 cask "postman"
+cask "ringcentral-meetings"
 cask "slack"
 cask "spectacle"
+cask "studio-3t"
 cask "sublime-text"
-cask "vlc"
 cask "tunnelblick"
+cask "vlc"
 mas "Be Focused", id: 973134470
 mas "GIPHY CAPTURE", id: 668208984
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
 mas "Wunderlist", id: 410628904
-mas "Pages", id: 409201541
-mas "HazeOver", id: 430798174

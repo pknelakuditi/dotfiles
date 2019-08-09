@@ -1,0 +1,33 @@
+#!/bin/sh
+
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+currentBranch="$(git rev-parse --abbrev-ref HEAD)"
+branchType="$(echo ${currentBranch} | awk -F '/' '{print $1}')"
+issueNumber="$(echo ${currentBranch} | awk -F '/' '{ print $2 }'| awk -F '-' '{print $1 "-" $2}')"
+
+
+if [[ "${branchType}" =~ ^(feat|fix|refactor|release)$ ]]; then
+	commitType=${branchType}
+elif [[ "${branchType}" =~ ^feature$ ]];then
+        commitType="feat"
+elif [[ "${branchType}" =~ ^refacto$ ]];then
+	commitType="refactor"
+elif [[ "${branchType}" =~ ^(chore|docs|style|perf|test|build)$ ]]; then
+	commitType=${branchType}
+elif [[ "${branchType}" =~ ^doc$ ]]; then
+	commitType="docs"
+else
+	commitType=""	
+fi
+
+if [[ "${currentBranch}" =~ ^(feat|feature|fix|refactor|chore|docs|style|perf|test|build|release)/[A-Z]{1,10}-[0-9]{1,10}.*$ ]]; then
+	echo "$commitType: [$issueNumber]" $(cat "$1") > "$1"
+else 
+	echo "$YELLOW"
+	echo "Branch name should follow format (feat|feature|fix|refactor|chore|docs|style|perf|test|build|release)\JIRA-123-desc for properly preparing commit message"
+    echo "${NC}"
+fi
+
+
