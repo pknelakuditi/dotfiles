@@ -1,3 +1,10 @@
+[user]
+	name = pavan kumar nelakuditi
+    email = pavannelakuditi@gmail.com
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	dlb = !git branch --merged | grep -v \\* | xargs git branch -D
+	lol = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
   excludesfile = ~/.gitignore_global
 [pager]
@@ -12,7 +19,7 @@
   smudge = git-lfs smudge %f
   required = true
 [commit]
-  gpgsign = true
+  #gpgsign = true
 [push]
   default = simple
 [user]
@@ -43,6 +50,6 @@
   new = green bold
   whitespace = red reverse
 
-# Allow local customizations in the .gitconfig_local file
-[include]
-  path = ~/.gitconfig_local
+# Allow local customizations
+[includeIf "gitdir:~/agile-projects/"]
+	path = ~/.gitconfig_agile

@@ -13,8 +13,6 @@ alias la="exa -abghl --git"
 # Sorts directories in top, colors, and prints `/` at directories:
 alias ls="/usr/local/bin/gls --color -h --group-directories-first -F"
 
-# git with hub:
-alias git="hub"
 
 # Pretty print XML (use `jq` for json):
 alias xq="xmllint --format"
@@ -31,8 +29,28 @@ alias a="terminal-notifier -sound default"
 # > poetry install && aa
 alias aa="a -message Done"
 
+
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Copy public key to clipboard:
 alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias mvnit="mvn clean install -DskipITs=true"
+alias oc-login="oc login -u pnelakuditi"
+#alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
+
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
