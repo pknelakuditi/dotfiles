@@ -31,10 +31,10 @@ HIST_IGNORE_SPACE="true"
 plugins=(
   gitfast
   python
-  django
   osx
   extract
-  git brew git-auto-fetch gitignore golang colorize docker oc mvn ng npm sbt zsh-autosuggestions zsh-syntax-highlighting
+  git brew git-auto-fetch gitignore golang colorize docker oc mvn ng npm sbt zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 # User configuration

@@ -5,6 +5,12 @@
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	dlb = !git branch --merged | grep -v \\* | xargs git branch -D
 	lol = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    c = "!git add -A && git commit -m "
+    p = !git push origin $(git rev-parse --abbrev-ref HEAD)
+    f = !git fetch --all && git rebase origin/dev
+    cc = "!git commit --amend -m "
+    n = !git checkout -b
+
 [core]
   excludesfile = ~/.gitignore_global
 [pager]
